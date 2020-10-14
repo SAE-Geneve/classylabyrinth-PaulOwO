@@ -6,24 +6,11 @@
 #include "world.h"
 #include "character.h"
 
-
-void show_help() 
-{
-	std::cout << "Valid options:\n";
-	std::cout << "\t[q]uit   -> quit the game.\n";
-	std::cout << "\t[n]orth  -> move north.\n";
-	std::cout << "\t[s]outh  -> move south.\n";
-	std::cout << "\t[w]est   -> move west.\n";
-	std::cout << "\t[e]ast   -> move east.\n";
-	std::cout << "\t[a]ttack -> attack enemies.\n\n";
-}
-
-
 Command cmd;
 int main()
 {
 	std::cout << "Welcome in the Maze!\n\n";
-	show_help();
+	cmd.ShowHelp();
 	while (true)
 	{
 		cmd.ShowState();
